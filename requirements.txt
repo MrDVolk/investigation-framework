@@ -1,0 +1,15 @@
+beautifulsoup4
+fastapi
+joblib
+jupyter
+matplotlib
+numpy
+pandas
+plotly
+pytest
+requests
+scikit-image
+scikit-learn
+scipy
+seaborn
+tqdm
