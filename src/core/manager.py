@@ -31,7 +31,7 @@ class Manager:
         for actor in self.actors:
             actor.register(history)
         
-        history.add('system', self.prompts['debate'])
+        history.add('system', self.prompts['brainstorm'])
 
     def run(self, history: History) -> Generator[GenerationToken, None, None]:
         for actor in self.actors:
