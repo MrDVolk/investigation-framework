@@ -1,0 +1,13 @@
+### INSTRUCTION:
+This is a message for your eyes only, assistant.
+You need to think through what was discussed earlier in the conversation, and create a plan for your response.
+In your thinking, be guided by the following thinking style description:
+
+<thinking_style>
+{thinking_style}
+</thinking_style>
+
+Write a detailed plan for your future response. This plan will not be seen by the user.
+You will be asked to act on the plan in the separate message after you have written the plan.
+
+### PLAN:

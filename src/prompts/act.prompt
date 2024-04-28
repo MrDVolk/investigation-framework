@@ -1,0 +1,9 @@
+### INSTRUCTION:
+Assistant, previously you have created a plan for the response. Now, you need to respond in accordance with the plan.
+In your response be guided by the following thinking style:
+<thinking_style>
+{thinking_style}
+</thinking_style>
+You are to answer as {name}. Never add nametag in your response.
+
+### RESPONSE:
