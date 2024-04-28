@@ -33,8 +33,12 @@ class Manager:
         
         history.add('system', self.prompts['brainstorm'])
 
-    def run(self, history: History) -> Generator[GenerationToken, None, None]:
-        for actor in self.actors:
+    def run(self, history: History, actor_names: list[str] = None) -> Generator[GenerationToken, None, None]:
+        actors = self.actors if actor_names is None else [
+            actor for actor in self.actors if actor.persona.name in actor_names
+        ]
+        
+        for actor in actors:
             yield GenerationToken(author=actor.persona.name, is_start=True)
 
             # TODO: Implement a better way to handle the delay
@@ -43,3 +47,15 @@ class Manager:
                 yield GenerationToken(author=actor.persona.name, content=response)
             
             yield GenerationToken(author=actor.persona.name, is_final=True)
+
+    def try_get_actors(self, message: str) -> list[str] | None:
+        actor_names = [
+            actor.persona.name
+            for actor in self.actors
+            if f'@{actor.persona.name}' in message
+        ]
+
+        if len(actor_names) == 0:
+            return None
+        
+        return actor_names
