@@ -1,0 +1,8 @@
+div.watermark a {
+    display: none !important;
+}
+
+header img {
+    max-height: 80px !important;
+    height: 46px !important;
+}
